@@ -2,6 +2,43 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { injectable, inject, Container } from 'inversify';
+
+@injectable()
+class Test {
+  constructor() {
+    //
+  }
+
+  hello(): string {
+    return "TEST";
+  }
+}
+
+const TYPES = {
+  Test: Symbol("TEST")
+}
+
+@injectable()
+class TestUsage {
+  private _test: Test;
+
+    public constructor(
+        @inject(TYPES.Test) test: Test,
+    ) {
+      this._test = test;
+    }
+
+    public pokus() {
+      console.log(this._test.hello());
+    }
+
+}
+
+var container = new Container();
+container.bind<Test>(TYPES.Test).to(Test);
+
+
 class App extends Component {
   render() {
     return (
