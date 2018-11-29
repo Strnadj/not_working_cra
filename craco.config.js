@@ -1,8 +1,8 @@
 module.exports = {
-    babel: {
-        plugins: [
-            ["@babel/plugin-proposal-decorators", { legacy: true }],
-            ["@babel/plugin-proposal-class-properties", { "loose": false }]
-        ]
-    }
+  babel: {
+    plugins: [
+      ["@babel/plugin-proposal-decorators", { "decoratorsBeforeExport": true }],
+      ["@babel/plugin-proposal-class-properties", { "loose" : true }],
+    ]
+  }
 };
