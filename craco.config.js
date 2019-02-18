@@ -1,7 +1,8 @@
 module.exports = {
   babel: {
     plugins: [
-      ["@babel/plugin-proposal-decorators", { "decoratorsBeforeExport": true }]
+      ["@babel/plugin-proposal-decorators", { "legacy": true }],
+      "babel-plugin-transform-function-parameter-decorators"
     ]
   }
 };

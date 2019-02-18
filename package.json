@@ -3,16 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/plugin-proposal-decorators": "^7.1.6",
-    "@craco/craco": "^3.1.1",
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@craco/craco": "^3.2.2",
     "@types/jest": "^23.3.9",
     "@types/node": "^10.12.10",
     "@types/react": "^16.7.7",
     "@types/react-dom": "^16.0.11",
+    "babel-plugin-transform-function-parameter-decorators": "^1.2.0",
     "inversify": "^5.0.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1",
+    "react-scripts": "2.1.5",
     "reflect-metadata": "^0.1.12",
     "typescript": "^3.1.6"
   },
@@ -30,5 +32,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-plugin-parameter-decorator": "^1.0.5"
+  }
 }

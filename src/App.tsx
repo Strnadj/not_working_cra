@@ -38,6 +38,9 @@ class TestUsage {
 var container = new Container();
 container.bind<Test>(TYPES.Test).to(Test);
 
+const f = new TestUsage();
+f.pokus();
+
 
 class App extends Component {
   render() {
