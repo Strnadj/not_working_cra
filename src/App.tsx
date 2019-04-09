@@ -16,7 +16,8 @@ class Test {
 }
 
 const TYPES = {
-  Test: Symbol("TEST")
+  Test: Symbol("TEST"),
+  TestUsage: Symbol("TESTUSAGE")
 }
 
 @injectable()
@@ -37,8 +38,9 @@ class TestUsage {
 
 var container = new Container();
 container.bind<Test>(TYPES.Test).to(Test);
+container.bind<TestUsage>(TYPES.TestUsage).to(TestUsage);
 
-const f = new TestUsage();
+const f = container.get<TestUsage>(TYPES.TestUsage);
 f.pokus();
 
 
